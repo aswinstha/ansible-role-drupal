@@ -9,8 +9,8 @@
 # TODO: Import configuration if configured?
 # TODO: Other commands if configured?
 
-- name: Rebuild Drupal caches.
-  command: "{{ drush_path }} cache-rebuild --quiet"
+- name: Clear Drupal caches.
+  command: "{{ drush_path }} cc all"
   args:
     chdir: "{{ drupal_core_path }}"
   tags: ['skip_ansible_lint']
